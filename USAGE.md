@@ -43,11 +43,3 @@ Como experto en el área, he diseñado este proyecto priorizando tres pilares qu
 1. **Desacoplamiento:** El motor de parsing HL7 es independiente de la base de datos. Podrías cambiar SQL Server por PostgreSQL y solo tendrías que tocar la capa de persistencia.
 2. **Auditabilidad:** En salud, "si no está registrado, no ocurrió". El uso de `Audit_Logs` no es un añadido, es el núcleo del sistema para cumplir con normativas **HIPAA/GDPR**.
 3. **Semántica:** A diferencia de otros simuladores que usan texto plano, este sistema obliga al uso de **Sistemas de Codificación**. No aceptamos "Tensión Arterial", aceptamos el código LOINC correspondiente.
-
----
-
-### ¿Cuál es tu siguiente paso?
-
-Con este README, tu perfil en GitHub pasa de "aprendiz" a **"Especialista en Interoperabilidad"**.
-
-Para cerrar con broche de oro, ¿te gustaría que te ayude a redactar una **"Guía de Contribución"** o una sección de **"Futuros Desarrollos"**? En esta última podríamos poner cosas como "Implementación de SMART on FHIR" o "Módulo de IA para predicción de reingresos basada en SNOMED", lo cual demuestra que tienes visión de futuro para el producto.

@@ -77,3 +77,9 @@ Uso de modelos **Pydantic** para garantizar que cualquier dato expuesto o recibi
 Integración de metadatos de imágenes médicas, permitiendo la trazabilidad entre el número de acceso (**Accession Number**) del sistema de información radiológica (RIS) y el almacenamiento en PACS.
 
 ---
+
+## 🛡️ Propiedad Intelectual y Licencia
+
+Este repositorio es un **Showcase Técnico**. La lógica de negocio propietaria y los diccionarios terminológicos completos están omitidos o protegidos bajo licencia **CC BY-NC-ND 4.0**. Para ver implementaciones completas o casos de uso específicos, contactar directamente.
+
+---
