@@ -5,7 +5,7 @@
       <img src="./assets/NexusMed_1024.jpg" alt="NexusMed Logo" width="200"/>
     </td>
     <td align="right" valign="top">
-      <img src="./assets/Diagrama_ER.jpg" alt="Diagrama Entidad Relación" height="200"/>
+      <img src="./assets/Diagrama_ER.JPG" alt="Diagrama Entidad Relación" height="200"/>
       <p align="right"><i>Diagrama E/R: Núcleo Hospitalario (16 tablas principales)</i></p>
     </td>
   </tr>
