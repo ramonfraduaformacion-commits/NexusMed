@@ -1,0 +1,36 @@
+{
+  "resourceType": "Practitioner",
+  "id": "Dermat009",
+  "identifier": null,
+  "active": true,
+  "name": [
+    {
+      "family": "Ferrer",
+      "given": [
+        "Leandro"
+      ],
+      "prefix": [
+        "Dr."
+      ]
+    }
+  ],
+  "gender": "male",
+  "qualification": [
+    {
+      "identifier": null,
+      "code": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0360",
+            "code": "MD",
+            "display": "Doctor of Medicine"
+          }
+        ],
+        "text": "Doctorado en Medicina"
+      },
+      "period": null,
+      "issuer": null
+    }
+  ],
+  "address": null
+}

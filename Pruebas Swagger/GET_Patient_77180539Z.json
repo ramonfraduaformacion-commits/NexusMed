@@ -1,0 +1,46 @@
+{
+  "resourceType": "Patient",
+  "id": "77180539Z",
+  "identifier": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.2.7.2",
+      "value": "465789123"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Moraleda",
+      "given": [
+        "Íngrid"
+      ]
+    }
+  ],
+  "birthDate": "2004-04-11",
+  "gender": "female",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+34925113945",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "íngrid.moraleda@example.com",
+      "use": "home"
+    }
+  ],
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "line": [
+        "Paseo de Elisabet Carballo 219"
+      ],
+      "city": "Córdoba",
+      "postalCode": "46281",
+      "country": "España"
+    }
+  ]
+}

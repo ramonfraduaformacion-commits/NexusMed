@@ -1,0 +1,41 @@
+{
+  "resourceType": "Patient",
+  "id": "20941560Z",
+  "identifier": null,
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Vega",
+      "given": [
+        "Iván"
+      ]
+    }
+  ],
+  "birthDate": "2005-04-02",
+  "gender": "male",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+34741277938",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "iván.vega@example.com",
+      "use": "home"
+    }
+  ],
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "line": [
+        "Paseo Daniel Pera 40"
+      ],
+      "city": "Palencia",
+      "postalCode": "14918",
+      "country": "España"
+    }
+  ]
+}

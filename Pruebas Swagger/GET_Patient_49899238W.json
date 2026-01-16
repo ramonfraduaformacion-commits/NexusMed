@@ -1,0 +1,41 @@
+{
+  "resourceType": "Patient",
+  "id": "49899238W",
+  "identifier": null,
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Tejada",
+      "given": [
+        "Rómulo"
+      ]
+    }
+  ],
+  "birthDate": "1985-05-25",
+  "gender": "male",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+34806215726",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "rómulo.tejada@example.com",
+      "use": "home"
+    }
+  ],
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "line": [
+        "Camino de Zoraida Osorio 31"
+      ],
+      "city": "Toledo",
+      "postalCode": "14042",
+      "country": "España"
+    }
+  ]
+}

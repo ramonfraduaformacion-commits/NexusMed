@@ -1,3 +1,16 @@
+
+<table border="0">
+  <tr>
+    <td width="300" align="left" valign="top">
+      <img src="./assets/NexusMed_1024.jpg" alt="NexusMed Logo" width="200"/>
+    </td>
+    <td align="right" valign="top">
+      <img src="./assets/Diagrama_ER.jpg" alt="Diagrama Entidad Relación" height="200"/>
+      <p align="right"><i>Diagrama E/R: Núcleo Hospitalario (16 tablas principales)</i></p>
+    </td>
+  </tr>
+</table>
+
 # Framework de Interoperabilidad Clínica End-to-End
 
 Este proyecto implementa un ecosistema completo de gestión de información hospitalaria, simulando el flujo de datos desde la admisión del paciente en Urgencias hasta su alta, integrando estándares internacionales de interoperabilidad (**HL7 v2, FHIR, DICOM**) y terminologías clínicas controladas (**LOINC, SNOMED CT**).
@@ -19,7 +32,9 @@ El proyecto destaca por su capacidad híbrida de manejar protocolos "legacy" y m
 
 * **Capa de Mensajería (Low Level):** Implementación de un servidor **MLLP (Minimal Lower Layer Protocol)** sobre TCP/IP para la recepción de mensajes HL7 v2.x, con gestión de confirmaciones **ACK (AA/AE/AR)**.
 * **Capa de Exposición (API):** API REST desarrollada con **FastAPI** bajo estándares **HTTPS**, exponiendo recursos en formato **JSON FHIR R4/R5**.
-* **Seguridad y Auditoría:** Sistema de trazabilidad compatible con **GDPR**, registrando cada acceso y mutación de datos en una tabla de auditoría dedicada (`Audit_Logs`).
+* **Validación de Esquemas FHIR (Core Strength):** Se implementa una validación estricta mediante modelos **Pydantic**. Esto garantiza que cualquier recurso (como un `Patient`) cumpla con la cardinalidad, tipos de datos y estructuras requeridas por el estándar HL7 FHIR antes de ser procesado o devuelto por la API.
+* **Gobernanza Operativa:** Se busca un equilibrio entre la validación estricta y la **flexibilidad asistencial**, permitiendo la ingesta de datos en escenarios críticos donde la operativa real no puede verse bloqueada por la rigidez del formato.
+
 
 ---
 
@@ -68,13 +83,11 @@ Para evitar la ambigüedad clínica, el sistema integra:
 
 En lugar de estructuras monolíticas de decisión (`if/else`), el sistema utiliza un **Patrón de Mapeo por Estrategia**. Cada segmento HL7 (`PID`, `OBX`, `MSH`) es procesado por un handler independiente, permitiendo extender el sistema a nuevos mensajes en minutos.
 
-### 2. Validación de Esquemas FHIR
+### 2. Seguridad por Diseño (Inmutabilidad): 
+La tabla de auditoría `Audit_Logs` es inmutable por diseño de base de datos. El usuario de la aplicación tiene permisos de `INSERT`, pero tiene denegado el `UPDATE` y `DELETE`, garantizando el cumplimiento de **GDPR/HIPAA**.
 
-Uso de modelos **Pydantic** para garantizar que cualquier dato expuesto o recibido cumpla estrictamente con la cardinalidad y los tipos de datos definidos por HL7 International.
-
-### 3. Gestión de Ciclo de Vida DICOM
-
-Integración de metadatos de imágenes médicas, permitiendo la trazabilidad entre el número de acceso (**Accession Number**) del sistema de información radiológica (RIS) y el almacenamiento en PACS.
+### 3. Estrategia de Persistencia JSON: 
+Uso de `NVARCHAR(MAX)` con soporte nativo de SQL Server para datos jerárquicos. Este enfoque permite la evolución ágil del esquema FHIR sin sacrificar la capacidad de consulta.
 
 ---
 

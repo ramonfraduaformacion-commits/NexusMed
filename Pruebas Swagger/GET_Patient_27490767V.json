@@ -1,0 +1,41 @@
+{
+  "resourceType": "Patient",
+  "id": "27490767V",
+  "identifier": null,
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Barrio",
+      "given": [
+        "Zaida"
+      ]
+    }
+  ],
+  "birthDate": "1979-08-01",
+  "gender": "female",
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+34983346772",
+      "use": "mobile"
+    },
+    {
+      "system": "email",
+      "value": "zaida.barrio@example.com",
+      "use": "home"
+    }
+  ],
+  "address": [
+    {
+      "use": "home",
+      "type": "both",
+      "line": [
+        "Cañada de Sabina Busquets 58"
+      ],
+      "city": "Ciudad",
+      "postalCode": "38227",
+      "country": "España"
+    }
+  ]
+}
